@@ -225,8 +225,8 @@ def insert_resizebox(tex_file_path):
 tex_file_path = "graph.tex"
 insert_resizebox(tex_file_path)
 
-# Parse the CSV data
-csv_data = r"""source,target,label,style
+"""# Parse the CSV data
+csv_data = r'''source,target,label,style
 twts,$t^2$,$w_4$
 éq. déc.,déc.,3.1.23
 éq. irr.,irr.,3.1.24
@@ -241,6 +241,7 @@ fini,déc.,3.2.5,dashed
 irr.,indéc.,3.2.7 pas la réciproque
 fini,comp. réd.,3.2.8 Maschke
 $\phi \nsim \rho$,$\frac{\gamma}{x^2}$,test
+'''
 """
 
 tex_file_path = "graph2"
@@ -269,8 +270,9 @@ SVG(f"{tex_file_path}.svg")
 
 #SVG("testnode.svg")
 
-csv_node=r"""name,texlbl
+"""csv_node=r'''name,texlbl
 fini,$\text{card}(G)<\infty$
+'''
 """
 
 def csv_to_svg(csv_data,csv_node="",tex_file_path = "graph"):

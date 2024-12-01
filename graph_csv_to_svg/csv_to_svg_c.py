@@ -154,16 +154,7 @@ with open('graph.dot', 'r') as file:
     for line in lines:
         print(line)
 
-"""!pip install dot2tex
 
-!sudo apt install pdf2svg
-
-!sudo apt update
-!sudo apt install texlive-xetex
-
-!dot2tex  --docpreamble "\usepackage[utf8]{inputenc} \usepackage[T1]{fontenc} \usepackage{amssymb}" -tmath --autosize graph.dot > graph.tex
-#!latex
-"""
 
 def insert_resizebox(tex_file_path):
     """Inserts \resizebox{\linewidth}{!}{ and } into a LaTeX file.

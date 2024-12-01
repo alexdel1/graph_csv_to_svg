@@ -186,41 +186,8 @@ def insert_resizebox(tex_file_path):
 
     with open(tex_file_path, 'w') as f:
         f.writelines(lines)
-"""
-# Example usage:
-tex_file_path = "graph.tex"
-insert_resizebox(tex_file_path)
 
 
-
-
-tex_file_path = "graph2"
-(B,C)=csv_to_pd(csv_data)
-G = pd_to_nx(B,C)
-nx_to_dot(G,tex_file_path)
-
-
-# Using subprocess for shell commands
-subprocess.run(f'dot2tex --docpreamble "\\usepackage[utf8]{{inputenc}} \\usepackage[T1]{{fontenc}} \\usepackage{{amssymb}}" -tmath --autosize "{tex_file_path}.dot" > "{tex_file_path}.tex"', shell=True)
-insert_resizebox(f"{tex_file_path}.tex")
-subprocess.run(f'xelatex "{tex_file_path}.tex"', shell=True)
-
-subprocess.run(f'pdf2svg "{tex_file_path}.pdf" "{tex_file_path}.svg"', shell=True)
-
-SVG(f"{tex_file_path}.svg")
-
-
-
-#
-#!dot2tex  --docpreamble "\usepackage[utf8]{inputenc} \usepackage[T1]{fontenc} \usepackage{amssymb}" -tmath --autosize testnode.dot > testnode.tex
-#!latex
-
-#!xelatex testnode.tex
-#!pdf2svg testnode.pdf testnode.svg
-
-#SVG("testnode.svg")
-
-"""
 
 def csv_to_svg(csv_data,csv_node="",tex_file_path = "graph"):
     (B,C)=csv_to_pd(csv_data,csv_node)

@@ -7,34 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1LIWSL2AFA8eIry5G9Q_FwPDoXqZggv3O
 """
 
-# Parse the CSV data
-csv_data = r"""source,target,label,style
-éq. déc.,déc.,3.1.23
-éq. irr.,irr.,3.1.24
-éq. comp. réd.,comp. réd.,3.1.25
-unit.,irr.,3.2.3,dashed
-éq. unit.,éq. irr.,éq. 3.2.3,dashed
-unit.,déc.,3.2.3,dashed
-éq. unit.,éq. déc.,éq. 3.2.3,dashed
-fini,éq. unit.,3.2.4
-fini,irr.,3.2.5,dashed
-fini,déc.,3.2.5,dashed
-irr.,indéc.,3.2.7 pas la réciproque
-fini,comp. réd.,3.2.8 Maschke
-$\phi \nsim \rho$,$\frac{\gamma}{x^2}$,test
-"""
-
-csv_node=r"""name,texlbl
-fini,$\mathrm{card}(G)<\infty$
-"""
-
-"""!sudo apt update
-!sudo apt install graphviz libgraphviz-dev
-#ne pas oublier la version dev de graphviz
-
-!pip install pygraphviz
-"""
-
 import pandas as pd
 import io
 import unicodedata

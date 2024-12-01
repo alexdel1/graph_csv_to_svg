@@ -1,5 +1,4 @@
-try:
-    from .csv_to_svg_c import csv_to_svg
-    print("Import successful")
-except ImportError as e:
-    print(f"Import error: {e}")
+from .csv_to_svg_c import csv_to_svg
+
+# Or explicitly import the function
+__all__ = ['csv_to_svg']

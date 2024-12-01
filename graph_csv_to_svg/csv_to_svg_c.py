@@ -69,13 +69,14 @@ def csv_to_pd(csv_data,csv_node=""):
 
     C.fillna("solid", inplace=True)
     return (B,C)
+'''
 (B,C)=csv_to_pd(csv_data,csv_node)
 
 print("\nDataFrame B:")
 print(B)
 print("\nDataFrame C:")
 print(C)
-
+'''
 def pd_to_nx(B,C):
     # Assuming B and C DataFrames are already created from the previous code
 
@@ -100,6 +101,7 @@ def pd_to_nx(B,C):
             texlbl=row.get('label', '')  # Label attribute
         )
     return G
+'''
 G = pd_to_nx(B,C)
 # Optional: Verify the graph
 print("Number of nodes:", G.number_of_nodes())
@@ -125,7 +127,7 @@ for edge in G.edges(data=True):
 
 # Écrire directement dans un fichier DOT
 #A.write("graph.dot")
-
+'''
 def nx_to_dot(G,tex_file_path="graph"):
     dot_graph = to_pydot(G)
 
@@ -133,6 +135,7 @@ def nx_to_dot(G,tex_file_path="graph"):
     with open(tex_file_path+".dot", "w", encoding="utf-8") as f:
         f.write(dot_graph.to_string())
     return(dot_graph)
+'''
 dot_graph=nx_to_dot(G)
 print(dot_graph.to_string())
 
@@ -154,7 +157,7 @@ with open('graph.dot', 'r') as file:
     for line in lines:
         print(line)
 
-
+'''
 
 def insert_resizebox(tex_file_path):
     """Inserts \resizebox{\linewidth}{!}{ and } into a LaTeX file.
@@ -183,29 +186,13 @@ def insert_resizebox(tex_file_path):
 
     with open(tex_file_path, 'w') as f:
         f.writelines(lines)
-
+'''
 # Example usage:
 tex_file_path = "graph.tex"
 insert_resizebox(tex_file_path)
 
-"""# Parse the CSV data
-csv_data = r'''source,target,label,style
-twts,$t^2$,$w_4$
-éq. déc.,déc.,3.1.23
-éq. irr.,irr.,3.1.24
-éq. comp. réd.,comp. réd.,3.1.25
-unit.,irr.,3.2.3,dashed
-éq. unit.,éq. irr.,éq. 3.2.3,dashed
-unit.,déc.,3.2.3,dashed
-éq. unit.,éq. déc.,éq. 3.2.3,dashed
-fini,éq. unit.,3.2.4
-fini,irr.,3.2.5,dashed
-fini,déc.,3.2.5,dashed
-irr.,indéc.,3.2.7 pas la réciproque
-fini,comp. réd.,3.2.8 Maschke
-$\phi \nsim \rho$,$\frac{\gamma}{x^2}$,test
-'''
-"""
+
+
 
 tex_file_path = "graph2"
 (B,C)=csv_to_pd(csv_data)
@@ -233,10 +220,7 @@ SVG(f"{tex_file_path}.svg")
 
 #SVG("testnode.svg")
 
-"""csv_node=r'''name,texlbl
-fini,$\text{card}(G)<\infty$
 '''
-"""
 
 def csv_to_svg(csv_data,csv_node="",tex_file_path = "graph"):
     (B,C)=csv_to_pd(csv_data,csv_node)
@@ -252,6 +236,7 @@ def csv_to_svg(csv_data,csv_node="",tex_file_path = "graph"):
     subprocess.run(f'pdf2svg "{tex_file_path}.pdf" "{tex_file_path}.svg"', shell=True)
 
     display(SVG(f"{tex_file_path}.svg"))
-
+'''
 #csv_to_svg(csv_data)
 csv_to_svg(csv_data,csv_node,"testnode")
+'''

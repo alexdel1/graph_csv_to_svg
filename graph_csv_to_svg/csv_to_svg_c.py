@@ -35,7 +35,8 @@ import pygraphviz # Import the Graph class
 from networkx.drawing.nx_pydot import to_pydot
 from IPython.display import SVG
 import subprocess
-
+import warnings
+warnings.simplefilter("ignore")
 # Function to convert text to a valid Python variable name
 def to_variable_name(text):
     # Normalize the text to decompose accented characters

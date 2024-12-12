@@ -463,7 +463,7 @@ premrelortho,"$<\chi_{\phi}, \chi_{\rho}> = \begin{cases}1, & \text{si } \phi \s
 fini et phirho irr.,$\mathrm{et}$,diamond,{week5},{week5}
 fini et phinsimrho et phirho irr.,$\mathrm{et}$,diamond,{week5},{week5}
 chirhochirho1,"$<\chi_{\rho}, \chi_{\rho}> = 1$",,{week5},{week5}
-phirho ortho set,"$\{\chi_\phi,\chi_\rho\}\text{ est un ensemble orthonormal de }Z(G)$",,{week5},{week5}
+phirho ortho set,"$\{\chi_\phi,\chi_\rho\}\text{ est un ensemble orthonormal de }Z(L(G))$",,{week5},{week5}
 irr. et classe éq.,$\mathrm{et}$,diamond,{week5},{week5}
 unique déc.,"$\vcenter{\hbox{$\begin{array}{c}\phi \sim {\phi^{(1)}}^{\oplus m_1} \oplus  {\phi^{(2)}}^{\oplus m_2} \oplus ... \oplus  {\phi^{(k)}}^{\oplus m_k} \\\text{Existence et unicité de l'équivalent au choix des représentants des classes pour les représentations irréductibles près}\end{array}$}}$",,{week5},{week5}
 egalGdeg,$\vert G \vert = d_1^2+d_2^2+\cdots+d_s^2$,,{week6},{week6}
